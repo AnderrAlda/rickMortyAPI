@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
-    <script src="/dist/index.js"></script>
+    <script type="module" src="/dist/index.js"></script>
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-gray-100 overflow-hidden">
     <!-- Header -->
     <header class="bg-gray-800 text-white p-4">
       <div class="container mx-auto flex items-center justify-between">
-        <div class="text-2xl font-bold">Your Logo</div>
+        <div class="text-2xl font-bold">Rick and Morty</div>
       </div>
     </header>
 
     <div class="flex h-screen bg-gray-200">
       <!-- Sidebar -->
-      <aside class="w-64 bg-white p-4 shadow">
-        <h1 class="text-2xl font-bold mb-4">Sidebar</h1>
+      <aside
+        class="w-64 bg-white p-4 shadow flex flex-col overflow-y-auto max-h-[calc(100vh-4rem)]"
+      >
+        <h1 class="text-2xl font-bold mb-4">Episodes</h1>
         <ul id="episodeList">
           <!-- Episodes will be dynamically added here -->
         </ul>
@@ -30,11 +32,34 @@
         </button>
       </aside>
 
-      <!-- Main Content -->
-      <main class="flex-1 p-4">
-        <h1 class="text-3xl font-bold mb-4">Main Content</h1>
-        <p>Your main content goes here.</p>
-        <button type="button" id="firstButton">hola</button>
+      <main class="flex-1 p-4 overflow-y-auto max-h-[calc(100vh-4rem)]">
+        <h1 class="text-4xl font-bold mb-8">Introduction</h1>
+
+        <p class="text-lg leading-7">
+          Throughout this project, I crafted a dedicated website for the iconic
+          television series Rick and Morty. All the engaging content showcased
+          on the page is dynamically fetched from a third-party API.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-6">Main Objectives</h2>
+        <ul class="list-disc pl-8 text-lg leading-7">
+          <li>🚀 Obtained information from third-party APIs</li>
+          <li>🎨 Enhanced my proficiency in HTML, CSS, and JavaScript</li>
+          <li>📘 Introduced TypeScript for enhanced code clarity</li>
+          <li>
+            🌐 Gained insights into seamless API integration with the client
+          </li>
+          <li>⚙️ Improved asynchronous data retrieval skills using AJAX</li>
+          <li>🏗️ Structured the web project for clarity and order</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold mt-12 mb-6">General Analysis</h2>
+        <p class="text-lg leading-7">
+          My primary focus was to fashion a visually appealing website capable
+          of presenting all facets of the series—episodes, characters, and
+          locations. Users can effortlessly navigate through the dynamic
+          content, showcasing the power of seamless information retrieval.
+        </p>
       </main>
     </div>
   </body>
